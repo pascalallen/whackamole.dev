@@ -1,7 +1,7 @@
 $(document).ready(function() {
 "use strict";
 
-$(".container").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
+$("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
 
 	var compPattern;
 	var userPattern = [];
@@ -54,10 +54,11 @@ $(".container").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/shar
 
 	function moleSplat(hole_num){
 		$('.container').on("click", "img", function(){
-			$(this).hide("explode", {pieces: 100}),
-			level += 1
+			$(this).hide("explode", {pieces: 100});
+			level += 1;
+			$("html").css('cursor', "url(http://aminoapps.com/static/bower/emojify.js/images/emoji/boom.png), auto");
 		})
-		$(".container").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
+		$("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
 	}
 
 	function randomMole(){
