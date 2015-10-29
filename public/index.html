@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whackamole</title>
+	<!-- BOOTSTRAP -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- JQUERY UI STYLING -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" type="text/css" href="css/whackamole.css">
+	<!-- TITLE IMG -->
+	<link rel="shortcut icon" href="img/mole.png">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default btn-lg" id="start">
+				<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+			</button>
+			<button type="button" class="btn btn-default  btn-lg" value="easy">Easy</button>
+			<button type="button" class="btn btn-default  btn-lg" value="medium">Medium</button>
+			<button type="button" class="btn btn-default  btn-lg" value="hard">Hard</button>
+		</div>
+		<div class="board">
+			<div class="score">
+		      <h3>Score: <span id="score">0</span></h2>
+		    </div>
+		    <div class="level">
+		    	<h3>Level: <span id="level">1</span></h3>
+		    </div>
+		    <div class="timer">
+		    	<h3>Timer: <span id="timer">30</span></h3>
+		    </div>
+		</div>
+		<div class="container">
+			<div class="hole-container" data-value="0">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="1">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="2">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="3">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="4">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="5">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="6">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="7">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+			<div class="hole-container" data-value="8">
+				<div class="hole"></div>
+				<img src="/img/mole.png">
+			</div>
+		</div>
+	</div>
+	<!-- JQUERY -->
+	<script src="/js/jquery-2.1.4.min.js"></script>
+	<!-- JQUERY UI -->
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<!-- CUSTOM JAVASCRIPT -->
+	<script src="/js/whackamole.js"></script>
+</body>
+</html>
