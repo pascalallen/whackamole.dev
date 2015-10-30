@@ -1,9 +1,11 @@
 body{
 	background: url(/img/landscape.jpg);
 	background-size: cover;
+	/*background-repeat: no-repeat;*/
+	height: 100%;
 }
 
-.score, .level, .timer{
+.score, .hiscore, .timer{
 	display: inline-block;
 	
 }
@@ -24,9 +26,9 @@ body{
 	left: 20px;
 	width: 80%;
 	height: 100px;
-	background-color: black;
+	/*background-color: black;*/
 	margin: 2px;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	position: relative;
 }
 
@@ -51,50 +53,115 @@ img{
 	display: block;
 	margin: 2px;
 	/*border: 1px solid black;*/
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	/*float: left;*/
 	position: relative;
 }
 
 .hole-container:first-child{
 	top: 0%;
+	right: 8%;
+	-ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .hole-container:nth-child(2){
-	bottom: 200px;
-	left: 20%;
+    bottom: 253px;
+    left: 56%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .hole-container:nth-child(3){
-	bottom: 400px;
-	left: 40%;
+    bottom: 790%;
+    left: 87%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 
 .hole-container:nth-child(4){
 	bottom: 400px;
+	right: 8%;
+	-ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .hole-container:nth-child(5){
-	bottom: 600px;
-    left: 20%;
+    bottom: 859px;
+    left: 38%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .hole-container:nth-child(6){
-	bottom: 800px;
-    left: 40%;
+    bottom: 797px;
+    left: 87%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 
 .hole-container:nth-child(7){
 	bottom: 800px;
-    left: 0%;
+    right: 8%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .hole-container:nth-child(8){
-	bottom: 1000px;
+    bottom: 1465px;
     left: 20%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .hole-container:nth-child(9){
-	bottom: 1200px;
-    left: 40%;
+    bottom: 2398%;
+    left: 87%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(270deg);
 }
+
+.hole-container:nth-child(10){
+    bottom: 1408px;
+    left: 41%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(360deg);
+}
+
+.hole-container:nth-child(11){
+	bottom: 3225%;
+    left: 5%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(0deg);
+}
+
+.hole-container:nth-child(12){
+    bottom: 3625%;
+    left: 23%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(0deg);
+}
+
+.hole-container:nth-child(13){
+    bottom: 2014px;
+    left: 59%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(360deg);
+}
+
+
+
+

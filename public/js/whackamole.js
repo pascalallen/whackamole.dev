@@ -6,10 +6,10 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 	var compPattern;
 	var userPattern = [];
 	var holeNum;
-	var score = 0;
-	var level;
+	var score;
+	var hiScore = 0;
 	var timer;
-	var duration = 2000;
+	var duration = 1500;
 
 	$('#start').click(function() {
 		selectLevel();
@@ -20,7 +20,7 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 	function newGame(){
 		countdown();
 		timer = 30;
-		level = 1;
+		score = 0;
 	}
 
 	function countdown(){
@@ -49,30 +49,29 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 			top: "135px"
 			}, 500)
 		}, duration);
-		moleSplat(hole_num);
 	}
 
-	function moleSplat(hole_num){
-		$('.container').on("click", "img", function(){
-			$(this).hide("explode", {pieces: 100});
-			level += 1;
-			$("html").css('cursor', "url(http://aminoapps.com/static/bower/emojify.js/images/emoji/boom.png), auto");
-		})
-		$("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
-	}
+	$('.container').on("click", "img", function(){
+		score += 1;
+		$("html").css('cursor', "url(http://www.cliparthut.com/clip-arts/294/blood-splash-294856.png), auto");
+		setTimeout(function(){
+			$("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
+		}, 500);
+	});
 
 	function randomMole(){
-		holeNum = Math.floor(Math.random() * 9);
+		holeNum = Math.floor(Math.random() * 13);
 		return holeNum;
 	}
 
 	function onRound(){
+		$("#score").html(score);
 		$("#timer").html(timer);
-		$("#level").html(level);
-		if(level > score){
-			score = level;
-			$("#score").html(score);
+		if(score > hiScore){
+			hiScore = score;
+			$("#hiscore").html(hiScore);
 		}
+
 	}
 
 	function selectLevel(){
@@ -82,10 +81,10 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 				duration;
 				break;
 			case "medium":
-				duration = 1000;
+				duration = 1200;
 				break;
 			case "hard":
-				duration = 800;
+				duration = 900;
 				break;
 		}
 	}
