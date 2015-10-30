@@ -1,20 +1,20 @@
 $(document).ready(function() {
 "use strict";
-
+// CHANGES CURSOR TO KNIFE ON PAGE LOAD
 $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitchen/96/Knife-icon.png), auto");
-
+	// GLOBAL VARIABLES
 	var compPattern;
-	var userPattern = [];
 	var holeNum;
 	var score;
 	var hiScore = 0;
 	var timer;
 	var duration = 1500;
-
+	var answer = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+	var code = []; 
+	// INITIALIZES GAME WHEN GLYPHICON PLAY BUTTON IS CLICKED
 	$('#start').click(function() {
 		selectLevel();
 		newGame();
-		// $(".btn").attr("disabled", true);
 	});
 
 	function newGame(){
@@ -73,7 +73,7 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 		}
 
 	}
-
+	// SELECTS DIFFICULTY
 	function selectLevel(){
 		var value = $(".active").val();
 		switch(value){
@@ -91,6 +91,19 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 
 	$(".btn-group button").click(function(){
 		$(this).addClass("active");
+	});
+
+	// CHEAT CODE TO NUKE 'EM ALL
+	$(document).keyup(function(event){
+	    code.push(event.keyCode);
+	    if (code[code.length - 1] != answer[code.length - 1]) {
+	    	code = [];
+	    }
+	    if(code.length == answer.length){
+	    	$("img").remove();
+	    	$('.hole-container').css('background-image', 'url(/img/mushroom_cloud.png').css('background-size', 'cover');
+	    	$('#bomb').get(0).play();
+	    }
 	});
 
 	function endGame(){
