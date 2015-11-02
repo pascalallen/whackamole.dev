@@ -103,6 +103,13 @@ $("html").css('cursor', "url(http://icons.iconarchive.com/icons/sirea/sharp-kitc
 	    	$("img").remove();
 	    	$('.hole-container').css('background-image', 'url(/img/mushroom_cloud.png').css('background-size', 'cover');
 	    	$('#bomb').get(0).play();
+	    	var winScore = setInterval(function(){
+	    		score++;
+	    		if(score == 500000){
+	    			clearInterval(winScore);
+					score;
+	    		}
+	    	}, 1000);
 	    }
 	});
 
